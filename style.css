@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root{
+    --LightCyan: hsl(193, 38%, 86%);
+    --NeonGreen: hsl(150, 100%, 66%);
+    --GrayishBlue: hsl(217, 19%, 38%);
+    --DarkGrayishBlue: hsl(217, 19%, 24%);
+    --DarkBlue: hsl(218, 23%, 16%);
+}
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--DarkBlue);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Manrope',sans-serif;
+}
+main{
+    background-color: var(--DarkGrayishBlue);
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    position: relative;
+}
+@media screen and (min-width: 100px){
+    main{
+        width: 100vw;
+        padding: 1.5rem;
+        height: auto;
+    }
+}
+@media screen and (min-width: 375px){
+    main{
+        width: calc(100vw - 3rem);
+        padding: 2.3rem 2rem;
+    }
+}
+@media screen and (min-width: 519px){
+    main{
+        width: 35rem;
+        padding: 2.7rem;
+        height: 22rem;
+    }
+}
+p{
+    color: var(--NeonGreen);
+    font-size: .9rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    text-align: center;
+
+}
+h1{
+    color: var(--LightCyan);
+    font-size: 1.75rem;
+    margin: 2rem 0;
+    height: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divider{
+    height: 2rem;
+    background: url('./images/pattern-divider-desktop.svg') no-repeat center center;
+}
+@media screen and (max-width: 375px){
+    .divider{
+        background: url('./images/pattern-divider-mobile.svg') no-repeat center center;
+
+    }
+}
+.dice-container{
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--NeonGreen);
+    border-radius: 50%;
+    display: flex;
+    cursor: pointer;
+    transition: 0.2s ease;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: calc(100% - 2rem);
+    left: calc(50% - 2rem);
+}
+.dice-container:hover{
+    -webkit-box-shadow: 0px 0px 60px 0px hsl(150, 100%, 66%);
+    -moz-box-shadow: 0px 0px 60px 0px hsl(150, 100%, 66%);
+    box-shadow: 0px 0px 60px 0px hsl(150, 100%, 66%);
+}
